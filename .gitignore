@@ -1,35 +1,238 @@
-# Dependências
+# =========================================================
+# DEPENDÊNCIAS
+# =========================================================
+
 node_modules/
+**/node_modules/
 
-# Builds
+.pnpm-store/
+**/.pnpm-store/
+
+
+# =========================================================
+# ARQUIVOS DE BUILD
+# =========================================================
+
 dist/
-build/
-coverage/
+**/dist/
 
-# Ambientes
+build/
+**/build/
+
+out/
+**/out/
+
+*.tsbuildinfo
+
+
+# =========================================================
+# CACHE
+# =========================================================
+
+.cache/
+**/.cache/
+
+.vite/
+**/.vite/
+
+.turbo/
+**/.turbo/
+
+.nx/
+**/.nx/
+
+.eslintcache
+*.cache
+
+
+# =========================================================
+# VARIÁVEIS DE AMBIENTE
+# =========================================================
+
 .env
 .env.*
-!.env.example
+**/.env
+**/.env.*
 
-# Logs
+# Exemplos de configuração devem ser versionados
+!.env.example
+!.env.*.example
+!**/.env.example
+!**/.env.*.example
+
+
+# =========================================================
+# SEGREDOS E CERTIFICADOS
+# =========================================================
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+
+secrets/
+**/secrets/
+
+
+# =========================================================
+# LOGS
+# =========================================================
+
+logs/
+**/logs/
+
 *.log
 npm-debug.log*
 pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-# Testes
+npm-view.err
+
+
+# =========================================================
+# TESTES E COBERTURA
+# =========================================================
+
+coverage/
+**/coverage/
+
+.nyc_output/
+**/.nyc_output/
+
 playwright-report/
-test-results/
+**/playwright-report/
 
-# Editores
+test-results/
+**/test-results/
+
+blob-report/
+**/blob-report/
+
+junit.xml
+
+
+# =========================================================
+# PRISMA
+# =========================================================
+
+# Cliente Prisma gerado automaticamente
+generated/prisma/
+**/generated/prisma/
+
+# Bancos locais, caso SQLite seja utilizado em testes
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+
+# Não ignorar:
+# prisma/schema.prisma
+# prisma/migrations/
+# prisma.config.ts
+# prisma7.config.ts
+
+
+# =========================================================
+# ARQUIVOS ENVIADOS PELO USUÁRIO
+# =========================================================
+
+uploads/
+**/uploads/
+
+storage/
+**/storage/
+
+temp/
+**/temp/
+
+tmp/
+**/tmp/
+
+*.tmp
+*.temp
+
+
+# =========================================================
+# FERRAMENTAS DE IA
+# =========================================================
+
+# Skills extensas geradas automaticamente pelo Prisma CLI
+.agents/
+.claude/skills/
+.cursor/skills/
+
+# Configurações locais e arquivos gerados
+.claude/settings.local.json
+skills-lock.json
+
+
+# =========================================================
+# EDITORES
+# =========================================================
+
+.idea/
+*.iml
+
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
-.idea/
+!.vscode/launch.json
+!.vscode/tasks.json
 
-# Sistema operacional
+*.code-workspace
+
+
+# =========================================================
+# SISTEMA OPERACIONAL
+# =========================================================
+
 .DS_Store
-Thumbs.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 
-# Prisma
-*.db
-*.db-journal
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+
+# =========================================================
+# ARQUIVOS DE BACKUP
+# =========================================================
+
+*.bak
+*.backup
+*.old
+*.orig
+*.swp
+*.swo
+*~
+
+
+# =========================================================
+# DOCKER LOCAL
+# =========================================================
+
+docker-data/
+**/docker-data/
+
+postgres-data/
+redis-data/
+minio-data/
+
+
+# =========================================================
+# RELATÓRIOS E PROFILING
+# =========================================================
+
+reports/
+**/reports/
+
+*.cpuprofile
+*.heapprofile
+*.heapsnapshot
